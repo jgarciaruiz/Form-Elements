@@ -1,0 +1,58 @@
+body {
+	background: #E9E9E9;
+	text-align: center;
+}
+
+.cselect {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+
+.cselect select {
+	border: 0;
+	margin: 0;
+	background-color: #663399;
+	border-bottom: 2px solid #4F2579;
+	border-radius: 4px;
+	color: #fff;
+	font-size: inherit;
+	padding: 8px;
+	padding-right: 40px;
+	text-shadow: 0 0 0 #000;
+	appearance:button;
+	-moz-appearance:button; /* Firefox */
+	-webkit-appearance:button; /* Safari and Chrome */;
+}
+
+/* right arrow */
+.cselect:before,
+.cselect:after {
+	content: "";
+	position: absolute;
+	pointer-events: none;/*prevent this layer clicks*/
+}
+.cselect:before:focus,
+.cselect:after:focus{
+	outline: 0;
+}
+
+.cselect:before {
+	width: 32px;
+	border-radius: 0 4px 4px 0;
+	background-color: rgba(0,0,0,.15);
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.cselect:after {
+	height: 16px;
+	line-height: 18px;
+	margin-top: -8px;
+	color: rgba(0,0,0,.4);
+	content: "\25BC";
+	font-size: 10px;
+	right: 10px;
+	top: 50%;
+}
